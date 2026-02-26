@@ -1,0 +1,20 @@
+skill: qq
+version: 1.0.0
+description: "QQ Bot integration via Tencent Official Bot API"
+core_version: 0.1.0
+adds:
+  - src/channels/qq.ts
+  - src/channels/qq.test.ts
+modifies:
+  - src/index.ts
+  - src/config.ts
+structured:
+  npm_dependencies:
+    qq-guild-bot: "^2.4.1"
+  env_additions:
+    - QQ_APP_ID
+    - QQ_TOKEN
+    - QQ_ONLY
+conflicts: []
+depends: []
+test: "npx vitest run src/channels/qq.test.ts"
